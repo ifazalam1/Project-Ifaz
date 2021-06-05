@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Famous Burger</title>
+  <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="nav-wrapper">
+      <div class="left-side">
+        <div class="nav-link-wrapper">
+          <a href="/">Home</a>
+        </div>
+        <div class="nav-link-wrapper">
+          <a href="/menu">Menu</a>
+        </div>
+        <% if (user) { %>
+          <div class="nav-link-wrapper">
+            <a href="/addItem">Add items</a>
+          </div>
+          <div class="nav-link-wrapper">
+            <a href="/logout">logout</a>
+          </div>
+          <%} else{ %>
+
+            <div class="nav-link-wrapper">
+              <a href="/login">Admin Login</a>
+            </div>
+            <% } %>
+              <div class="nav-link-wrapper">
+                <a href="/contact">About Us</a>
+              </div>
+      </div>
+
+      <div class="right-side">
+        <div class="brand">
+          <div>
+            <h2><b>Famous Burger</b></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div></div>
+</body>
+
+</html>

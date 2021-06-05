@@ -1,0 +1,21 @@
+<%- include("./../partials/header"); %>
+  <div class="admin-container">
+    <form method="POST" action="/login" enctype="application/x-www-form-urlencoded">
+      <h3>Admin Login</h3>
+      <br />
+
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="username" id="uname" required />
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" id="psw" required />
+      <input type="submit" value="Submit" />
+    </form>
+    <a href="/registration"> Don't have an account? Register </a>
+    <% if (loginFailed) { %>
+      <p style="color: red">
+        <%= loginFailed %>
+      </p>
+      <% } %>
+  </div>
+  <%- include("./../partials/footer"); %>

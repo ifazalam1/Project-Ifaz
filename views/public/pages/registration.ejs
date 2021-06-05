@@ -1,0 +1,47 @@
+<%- include("./../partials/header"); %>
+<div class="admin-container">
+  <form
+    method="POST"
+    enctype="application/x-www-form-urlencoded"
+    action="/registration"
+  >
+    <h3>Admin Registration</h3>
+    <br />
+
+    <label for="uname"><b>Username</b></label>
+    <input
+      type="text"
+      placeholder="Enter Username"
+      name="username"
+      id="uname"
+      required
+    />
+
+    <label for="psw"><b>Password</b></label>
+    <input
+      type="password"
+      placeholder="Enter Password"
+      name="password"
+      id="psw"
+      required
+    />
+
+    <label for="secret"><b>Secret Code</b></label>
+    <br />
+    <input
+      type="number"
+      placeholder="Enter Secret Code"
+      name="secret"
+      required
+    />
+    <br />
+    <br />
+    <input type="submit" value="Submit" />
+  </form>
+  <a href="/login"> Have an account? Login </a>
+  <br />
+  <% if (failure) { %>
+  <p style="color: red"><%= failure %></p>
+  <% } %>
+</div>
+<%- include("./../partials/footer"); %>

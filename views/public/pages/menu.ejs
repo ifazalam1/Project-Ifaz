@@ -1,0 +1,9 @@
+<%- include("./../partials/header"); %>
+<div style="height: 960px" class="main">
+  <h2>Items</h2>
+  <div class="itemsGrid">
+    <% if (menu) { %> <% for( let index = 0; index < menu.length; index++ ) { %>
+    <%- menu[index]%> <% } %> <% } %>
+  </div>
+</div>
+<%- include("./../partials/footer"); %>
