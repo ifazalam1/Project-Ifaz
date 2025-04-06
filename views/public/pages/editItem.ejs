@@ -1,0 +1,17 @@
+<%- include("./../partials/header"); %>
+<div style="height: 960px" class="main">
+  <h2>Edit Item</h2>
+  <form action="/edit/<%= item._id %>" method="POST">
+    <label for="itemName">Item Name:</label>
+    <input type="text" id="itemName" name="itemName" value="<%= item.itemName %>" required />
+
+    <label for="itemPrice">Price (Taka):</label>
+    <input type="number" id="itemPrice" name="itemPrice" value="<%= item.itemPrice %>" required />
+
+    <label for="itemImageUrl">Image URL:</label>
+    <input type="text" id="itemImageUrl" name="itemImageUrl" value="<%= item.itemImageUrl %>" required />
+
+    <button type="submit">Save Changes</button>
+  </form>
+</div>
+<%- include("./../partials/footer"); %>

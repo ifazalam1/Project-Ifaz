@@ -172,6 +172,23 @@ img {
   padding: 10px;
 }
 
+/*deletion button*/
+
+.deleteBtn {
+  display: inline-block;
+  background-color: red;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.deleteBtn:hover {
+  background-color: darkred;
+}
+
+
 @media screen and (max-width: 900px) {
   .column {
     width: 50%;
